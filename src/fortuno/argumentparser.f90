@@ -153,7 +153,8 @@ contains
           cycle
         end if
         if (.not. optionsallowed .or. arg(1:1) /= "-") then
-          posargs =  [posargs, string_item(arg)]
+          error stop "Old ifort does not support this"
+          ! posargs =  [posargs, string_item(arg)]
           cycle
         end if
         islong = arg(1:min(len(arg), 2)) == "--"
