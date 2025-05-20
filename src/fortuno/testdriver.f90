@@ -417,8 +417,8 @@ contains
       class is (test_case_base)
         call testdatacont%add(testdata)
       class default
-        error stop  "Invalid test type obtained for test item '" // newname //&
-            & "' (expected serial_suite_base or serial_case_base)"
+        print *, "newname is ", newname
+        error stop  "Invalid test type obtained for test item (expected serial_suite_base or serial_case_base)"
       end select
     end do
   end subroutine build_test_data_
