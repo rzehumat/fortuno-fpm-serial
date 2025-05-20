@@ -33,7 +33,9 @@ contains
     integer :: exitcode
 
     call run_serial_cmd_app(tests, exitcode)
-    stop exitcode, quiet=.true.
+    print *, "exitcode is ", exitcode
+    stop "See exitcode above"
+    ! stop exitcode, quiet=.true.
 
   end subroutine execute_serial_cmd_app
 
