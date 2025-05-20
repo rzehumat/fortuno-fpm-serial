@@ -292,11 +292,9 @@ contains
       type is (string_item_list)
         val = argval%items
       class default
-        print *, "Invalid argument type for argument '" // name // "'"
         error stop "Invalid argument type for argument "
       end select
     else
-      print *, "Argument '" // name // "' not found"
       error stop "Argument not found"
     end if
 
